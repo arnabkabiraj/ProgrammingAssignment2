@@ -2,6 +2,13 @@
 ## To create a special cached matrix object call the function
 ## "makemakeCacheMatrix" with no arguments, like:
 ## x <- makeCacheMatrix()
+## and use the "set" fuction associated with the
+## object "x" to define the matrix later, or
+## call the function "makemakeCacheMatrix" with a matrix
+## argument, like : x <- makeCacheMatrix(matrix(1:4, 2, 2))
+## and use x$get() to get the value of the martix or use the
+## "set" fuction associated with the object "x" to re-define
+## the matrix later.
 ## To initiate a matrix call the function "set" associated with 
 ## the special cached matrix object.
 ## For instance, x$set(matrix(1:4, 2, 2))
@@ -24,7 +31,8 @@
 ## calculated and stored into the cache.
 ## If so, it gets the inverse from the cache and skips the computation.
 ## Otherwise, it calculates the inverse of the data and sets the
-## value of the inverse in the cache via the "setinv" function.
+## value of the inverse in the cache via the "setinv" function
+## associated with the object (here, "x").
 
 
 ## This functon returns a list of functions: set, get, setinv
